@@ -1,0 +1,12 @@
+header {
+	position: fixed;
+	width: 100%;
+	height: $header-height;
+	color: $gray-backgr;
+	background-color: $bluefont;
+	.navbar {
+		@extend %flex-centered;
+		@include block-content;
+		max-width: $container-width;
+	}
+}
