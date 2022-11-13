@@ -38,4 +38,4 @@ jobs:
       - name: Lighthouse
         uses: foo-software/lighthouse-check-action@master
         with:
-          urls: 'https://webpack-html-sass-js.vercel.app'
+          urls: 'https://repair-company-site.vercel.app'
