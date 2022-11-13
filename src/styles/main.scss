@@ -15,12 +15,14 @@
 @import 'base/typography';
 
 // 4. Layout-related sections
-@import 'layout/footer';
-@import 'layout/main-container';
 @import 'layout/header';
+@import 'layout/main-container';
+@import 'layout/promo';
+@import 'layout/footer';
 
 // 5. Components
 @import 'components/button';
+@import 'components/link';
 
 // 6. Page-specific styles
 // @import 'pages/home';

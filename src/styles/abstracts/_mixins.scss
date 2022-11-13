@@ -1,11 +1,16 @@
-@mixin backgr($url) {
+@mixin backgr-centered($url) {
 	background: url($url) center no-repeat;
 }
 
 @mixin shadow() {
-	&:hover {
+	&:hover,
+	&:focus {
 		box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
 	}
+}
+
+%btn-shadow {
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 @mixin block-content() {
@@ -15,8 +20,49 @@
 	padding: 0 30px;
 }
 
-%flex-centered {
+%flex-simple {
 	display: flex;
+	flex-wrap: wrap;
+}
+
+%flex-aligned-center {
+	@extend %flex-simple;
 	align-items: center;
+}
+
+%flex-centered {
+	@extend %flex-aligned-center;
 	justify-content: center;
+}
+
+%flex-spaced {
+	@extend %flex-aligned-center;
+	justify-content: space-between;
+}
+
+%flex-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+%menu-link {
+	color: $color-black;
+	@extend %flex-centered;
+}
+
+%button-link {
+	color: $color-white;
+	@extend %flex-centered;
+}
+
+%orange-btn {
+	background-color: $color-orange;
+	box-shadow: 0 7px 15px 0 rgb(249 87 46 / 60%);
+
+	&:hover,
+	&:focus {
+		background-color: $color-orange-hovered;
+		box-shadow: 0 15px 20px rgb(249 87 46 / 70%);
+	}
 }

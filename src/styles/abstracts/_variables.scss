@@ -1,12 +1,39 @@
-$header-height: 100px;
+$header-height: 55px;
+$header-zindex: 2;
+$header-indent-horizontal: 110px;
+$header-indent-vertical: 48px;
+$header-logo-width: 202px;
+$phone-icon-width: 25px;
+$phone-icon-height: 25px;
+$promo-btn-width: 260px;
+$promo-btn-height: 51px;
+$promo-btn-radius: 100px;
+$promo-description-width: 48%;
+$promo-video-width: 52%;
+$promo-descr-indent: 90px;
+
+$player-button-size: 250px;
+
+$font-size-biggest: 4rem;
+$menu-font-size: 1.33rem;
+
+$duration-normal: 0.6s;
+$duration-medium: 0.45s;
+$duration-fast: 0.3s;
+
 $footer-height: 60px;
 $container-width: 1200px;
-$inner-container-indent: 10px;
+$inner-container-indent: 20px;
 
+$color-orange: #f9572e;
+$color-orange-hovered: #ff7b59;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-gray-light: #666666;
 $bluefont: darkblue;
 $graylight: #cfcfcf;
 $gray-backgr: #eee;
 
-$default-font: 'MullerRegular', sans-serif;
+$default-font: 'Muller', sans-serif;
 $default-transition-duration: 0.4s;
 $default-transition-function: ease-out;

@@ -1,12 +1,40 @@
-header {
-	position: fixed;
-	width: 100%;
+.main-header {
+	position: absolute;
+	top: $header-indent-vertical;
+	left: $header-indent-horizontal;
+	width: calc(100vw - 2 * $header-indent-horizontal);
 	height: $header-height;
-	color: $gray-backgr;
-	background-color: $bluefont;
-	.navbar {
+	z-index: $header-zindex;
+
+	.menu {
+		@extend %flex-spaced;
+	}
+
+	.menu__logo {
+		@extend %menu-link;
+		width: $header-logo-width;
+		height: $header-height;
+		@include backgr-centered('../assets/svg/logotype.svg');
+	}
+
+	.menu__contacts {
+		@extend %menu-link;
 		@extend %flex-centered;
-		@include block-content;
-		max-width: $container-width;
+		@extend %font-bigger;
+		line-height: calc($menu-font-size + 4px);
+		padding-bottom: 5px;
+
+		&:before {
+			content: '';
+			display: block;
+			width: $phone-icon-width;
+			height: $phone-icon-height;
+			@include backgr-centered('../assets/svg/phone.svg');
+			margin-right: 9px;
+		}
+
+		&:hover {
+			color: $color-orange;
+		}
 	}
 }
