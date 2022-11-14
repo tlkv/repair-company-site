@@ -5,6 +5,7 @@
 	width: calc(100vw - 2 * $header-indent-horizontal);
 	height: $header-height;
 	z-index: $header-zindex;
+	pointer-events: none;
 
 	.menu {
 		@extend %flex-spaced;
@@ -33,7 +34,8 @@
 			margin-right: 9px;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus {
 			color: $color-orange;
 		}
 	}

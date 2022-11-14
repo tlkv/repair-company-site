@@ -3,8 +3,8 @@
 // 7-1 sass pattern
 // 1. Configuration and helpers
 @import 'abstracts/variables';
-@import 'abstracts/mixins';
 @import 'abstracts/breakpoints';
+@import 'abstracts/mixins';
 
 // 2. Vendors
 @import 'vendors/normalize';
@@ -16,8 +16,9 @@
 
 // 4. Layout-related sections
 @import 'layout/header';
-@import 'layout/main-container';
-@import 'layout/promo';
+@import 'layout/section-promo';
+@import 'layout/section-about';
+@import 'layout/section-interior';
 @import 'layout/footer';
 
 // 5. Components

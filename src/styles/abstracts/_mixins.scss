@@ -20,6 +20,11 @@
 	padding: 0 30px;
 }
 
+%promo-item {
+	height: 100%;
+	padding: $inner-container-indent;
+}
+
 %flex-simple {
 	display: flex;
 	flex-wrap: wrap;
@@ -49,6 +54,7 @@
 %menu-link {
 	color: $color-black;
 	@extend %flex-centered;
+	pointer-events: auto;
 }
 
 %button-link {
@@ -65,4 +71,10 @@
 		background-color: $color-orange-hovered;
 		box-shadow: 0 15px 20px rgb(249 87 46 / 70%);
 	}
+}
+
+%narrow-container {
+	max-width: 1020px;
+	padding: 20px;
+	margin: 0 auto;
 }

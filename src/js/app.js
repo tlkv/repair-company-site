@@ -1,2 +1,2 @@
 import '../styles/main.scss';
-import './hello.js';
+import './video.js';
