@@ -1,5 +1,9 @@
 @mixin backgr-centered($url) {
-	background: url($url) center no-repeat;
+	background: url($url) center/contain no-repeat;
+}
+
+@mixin backgr-social($url) {
+	background: $color-orange url($url) center/50% 50% no-repeat;
 }
 
 @mixin shadow() {
@@ -77,4 +81,15 @@
 	max-width: 1020px;
 	padding: 20px;
 	margin: 0 auto;
+}
+
+%pseudo-img {
+	content: '';
+	display: block;
+}
+
+%social-btn {
+	width: $social-btn-size;
+	height: $social-btn-size;
+	display: block;
 }

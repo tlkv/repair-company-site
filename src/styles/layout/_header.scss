@@ -26,8 +26,7 @@
 		padding-bottom: 5px;
 
 		&:before {
-			content: '';
-			display: block;
+			@extend %pseudo-img;
 			width: $phone-icon-width;
 			height: $phone-icon-height;
 			@include backgr-centered('../assets/svg/phone.svg');

@@ -1,10 +1,31 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
 .footer {
-	width: 100%;
-	height: $footer-height;
-
+	min-height: 520px;
 	background-color: $gray-backgr;
-	border-bottom: 1px solid $graylight;
+	padding: 20px;
+
+	.social {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+		width: fit-content;
+		margin: 52px auto 30px auto;
+	}
+
+	.social__button {
+		@extend %social-btn;
+		@extend %orange-btn;
+		box-shadow: none;
+	}
+
+	.social__btn_fb {
+		@include backgr-social('../assets/svg/fb.svg');
+	}
+
+	.social__btn_vk {
+		@include backgr-social('../assets/svg/vk.svg');
+	}
+
+	.social__btn_ig {
+		@include backgr-social('../assets/svg/ig.svg');
+	}
 }

@@ -1,0 +1,38 @@
+.subscribe-section {
+	@extend %narrow-container;
+	max-width: 984px;
+	margin-top: 160px;
+	border: $border-width-standard solid $color-lightgreen;
+	min-height: 647px;
+	margin-bottom: 134px;
+
+	.title {
+		text-align: center;
+		margin: -46px auto 5px;
+		background-color: $color-white;
+		width: fit-content;
+		padding: 0 15px 0 20px;
+	}
+
+	.subtitle {
+		color: $color-black;
+		margin: auto;
+		width: fit-content;
+		@extend %flex-centered;
+		margin-top: 40px;
+
+		&:before {
+			@extend %pseudo-img;
+			width: 46px;
+			height: 69px;
+			margin-right: 18px;
+			@include backgr-centered('../assets/svg/door.svg');
+		}
+	}
+
+	.submission-form {
+		@extend %flex-col;
+		margin: 50px auto 50px auto;
+		max-width: 500px;
+	}
+}

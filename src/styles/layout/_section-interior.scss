@@ -1,3 +1,11 @@
-.interior-heading {
-	@extend %narrow-container;
+.interior-section {
+	.interior-heading {
+		@extend %narrow-container;
+	}
+
+	.slider {
+		margin-top: 20px;
+		// remove
+		height: 500px;
+	}
 }

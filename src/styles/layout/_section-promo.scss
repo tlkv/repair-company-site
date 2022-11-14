@@ -56,8 +56,7 @@
 		@extend %flex-simple;
 
 		&:before {
-			content: '';
-			display: block;
+		@extend %pseudo-img;
 			width: 42px;
 			height: 32px;
 			margin-right: 12px;
@@ -125,7 +124,7 @@
 
 		.video-container__button-inner {
 			border-radius: 50%;
-			border: 4px solid $color-orange;
+			border: $border-width-standard solid $color-orange;
 			width: $player-button-size;
 			height: $player-button-size;
 			display: block;
@@ -133,13 +132,11 @@
 			margin-bottom: 20px;
 
 			&:before {
-				content: '';
-				display: block;
+				@extend %pseudo-img;
 				width: 111px;
 				height: 127px;
 				margin: 55px 5px 5px 75px;
 				@include backgr-centered('../assets/svg/play_small.svg');
-				background-size: contain;
 				transition: all $duration-medium;
 			}
 
