@@ -1,9 +1,13 @@
-const videoContainer = document.querySelector('.video-container');
-const video = document.querySelector('.video-container__player');
-const videoButton = document.querySelector('.video-container__button');
+import { DEFAULT_SOUND_LEVEL } from './constants';
 
-if (video && videoContainer && videoButton) {
-	video.volume = 0.2;
+export const videoHandler = () => {
+	const videoContainer = document.querySelector('.video-container');
+	const video = document.querySelector('.video-container__player');
+	const videoButton = document.querySelector('.video-container__button');
+
+	if (!video || !videoContainer || !videoButton) return;
+
+	video.volume = DEFAULT_SOUND_LEVEL;
 
 	videoContainer.addEventListener('click', () => {
 		if (video.paused) {
@@ -19,4 +23,4 @@ if (video && videoContainer && videoButton) {
 		video.load();
 		videoButton.style.opacity = 1;
 	});
-}
+};

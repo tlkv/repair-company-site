@@ -1,2 +1,8 @@
 import '../styles/main.scss';
-import './video.js';
+import { videoHandler } from './video';
+import { sliderHandler } from './slider';
+
+window.onload = () => {
+	videoHandler();
+	sliderHandler();
+};

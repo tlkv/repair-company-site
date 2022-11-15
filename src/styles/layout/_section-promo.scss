@@ -56,7 +56,7 @@
 		@extend %flex-simple;
 
 		&:before {
-		@extend %pseudo-img;
+			@extend %pseudo-img;
 			width: 42px;
 			height: 32px;
 			margin-right: 12px;

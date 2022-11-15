@@ -39,9 +39,9 @@
 		.about-info__item-details {
 			line-height: $font-size-biggest;
 			margin-bottom: 10px;
-			 strong {
-				 @extend %font-biggest;
-			 }
+			strong {
+				@extend %font-biggest;
+			}
 		}
 	}
 }

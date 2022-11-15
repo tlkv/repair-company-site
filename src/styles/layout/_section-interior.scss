@@ -3,9 +3,43 @@
 		@extend %narrow-container;
 	}
 
+	overflow: hidden;
+
 	.slider {
 		margin-top: 20px;
-		// remove
+		width: 100%;
+		max-width: 915px;
 		height: 500px;
+		position: relative;
+	}
+
+	.slider-item {
+		width: 100%;
+		max-width: 915px;
+		height: 100%;
+		position: absolute;
+		display: flex;
+		transition: all $duration-normal;
+
+		.slider-item__img {
+			width: 82%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.slider-item__descr {
+			width: 16%;
+			padding: 0 5px 0 18px;
+			transition: all $duration-normal;
+			font-size: 0.84rem;
+			line-height: 1.2rem;
+			margin: 0;
+			overflow: hidden;
+		}
+	}
+
+	.slider-buttons {
+		margin: auto;
+		width: fit-content;
 	}
 }
