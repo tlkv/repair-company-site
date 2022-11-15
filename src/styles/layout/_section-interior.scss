@@ -28,18 +28,32 @@
 		}
 
 		.slider-item__descr {
-			width: 16%;
+			width: 20%;
 			padding: 0 5px 0 18px;
 			transition: all $duration-normal;
-			font-size: 0.84rem;
-			line-height: 1.2rem;
+			font-size: 0.8rem;
+			line-height: 1.25rem;
 			margin: 0;
 			overflow: hidden;
 		}
 	}
 
 	.slider-buttons {
-		margin: auto;
-		width: fit-content;
+		width: 75px;
+		@extend %flex-spaced;
+		left: calc(50vw + 36.5%);
+		z-index: $slider-buttons-zindex;
+		position: absolute;
+		bottom: 2px;
+	}
+
+	.slider-buttons__prev {
+		@extend %slider-button;
+		@include backgr-centered('../assets/svg/prev.svg');
+	}
+
+	.slider-buttons__next {
+		@extend %slider-button;
+		@include backgr-centered('../assets/svg/next.svg');
 	}
 }

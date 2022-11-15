@@ -7,8 +7,7 @@
 }
 
 @mixin shadow() {
-	&:hover,
-	&:focus {
+	&:hover {
 		box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
 	}
 }
@@ -69,9 +68,10 @@
 %orange-btn {
 	background-color: $color-orange;
 	box-shadow: 0 7px 15px 0 rgb(249 87 46 / 60%);
+	transition: all $duration-normal;
+	cursor: pointer;
 
-	&:hover,
-	&:focus {
+	&:hover {
 		background-color: $color-orange-hovered;
 		box-shadow: 0 15px 20px rgb(249 87 46 / 70%);
 	}
@@ -92,4 +92,20 @@
 	width: $social-btn-size;
 	height: $social-btn-size;
 	display: block;
+}
+
+%slider-button {
+	width: 21px;
+	height: 44px;
+	transition: all $duration-fast;
+
+	&:hover {
+		transform: scaleY(0.75);
+	}
+}
+
+%form-disclaimer {
+	font-size: 0.8rem;
+	display: block;
+	margin: 0 auto;
 }

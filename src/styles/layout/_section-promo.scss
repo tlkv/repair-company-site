@@ -64,8 +64,7 @@
 			transition: all $duration-normal;
 		}
 
-		&:hover,
-		&:focus {
+		&:hover {
 			&:before {
 				transform: scaleX(0.8);
 			}
@@ -87,8 +86,7 @@
 		position: relative;
 		cursor: pointer;
 
-		&:hover,
-		&:focus {
+		&:hover {
 			.video-container__button-inner {
 				&:before {
 					transform: scale(1.18);

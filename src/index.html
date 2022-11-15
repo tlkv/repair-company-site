@@ -69,36 +69,63 @@
 		</div>
 		<div class="slider">
 			<div class="slider-item">
-				<img class="slider-item__img" src="assets/img/content/slide1.jpg" loading="lazy" alt="slide">
+				<img class="slider-item__img" src="assets/img/content/slide1.jpg" loading="lazy"
+						 alt="slide">
 				<p class="slider-item__descr">Скандинавский стиль</p>
 			</div>
 			<div class="slider-item">
-				<img class="slider-item__img" src="assets/img/content/slide2.jpg" loading="lazy" alt="slide">
-				<p class="slider-item__descr">Кафельная плитка в ванной комнате
-					в скандинавском стиле</p>
+				<img class="slider-item__img" src="assets/img/content/slide2.jpg" loading="lazy"
+						 alt="slide">
+				<p class="slider-item__descr">Кафельная плитка <br/> в ванной комнате
+					<br/> в скандинавском стиле</p>
 			</div>
 			<div class="slider-item">
 				<img class="slider-item__img" src="assets/img/content/slide3.jpg" loading="lazy"
 						 alt="slide">
 				<p class="slider-item__descr">Эко-стиль</p>
 			</div>
-
+			<div class="slider-buttons">
+				<button class="slider-buttons__prev"></button>
+				<button class="slider-buttons__next"></button>
+			</div>
 		</div>
-		<div class="slider-buttons">
-			<button class="slider-btn-prev">Prev</button>
-			<button class="slider-btn-next">Next</button>
-		</div>
-
 	</section>
 	<section class="subscribe-section">
-		<h2 class="title" id="subscribe">Узнайте о запуске сервиса первым</h2>
-		<p class="subtitle">Первым 10 клиентам стальная<br/> входная дверь в подарок</p>
-		<form class="submission-form" action="/">
-			<input type="text" name="" id="subm-name">
-			<input type="email" name="" id="subm-email">
-			<input type="tel" name="" id="subm-phone">
-			<input type="submit" value="Подписаться">
-		</form>
+		<div class="subscribe-section-inner">
+			<h2 class="title" id="subscribe">Узнайте о запуске сервиса первым</h2>
+			<form class="submission-form" action="#">
+				<p class="subtitle">Первым 10 клиентам стальная<br/> входная дверь в подарок</p>
+				<div class="submission-field">
+					<input required minlength="3" maxlength="50" placeholder="Имя и фамилия*"
+								 class="submission-field__inner" type="text"
+								 name="name"
+								 id="name">
+					<label class="submission-field__label" for="name">Имя и фамилия*</label>
+				</div>
+				<div class="submission-field">
+					<input required minlength="3" maxlength="50" placeholder="Е-mail адрес*"
+								 class="submission-field__inner" type="email"
+								 name="email"
+								 id="email">
+					<label class="submission-field__label" for="email">Email адрес *</label>
+				</div>
+				<div class="submission-field">
+					<input pattern="[0-9]{10,11}" minlength="10" maxlength="11" placeholder="Телефон"
+								 class="submission-field__inner"
+								 type="tel" name="phone"
+								 id="phone">
+					<label class="submission-field__label" for="phone">Телефон</label>
+				</div>
+				<input class="submission__form-button" type="submit" value="Подписаться">
+				<p class="submission-form__disclaimer">* Обязательные для заполнения поля</p>
+				<a class="submission-form__policy" href="#">Политика конфиденциальности</a>
+			</form>
+			<div class="submission-success">
+				<div class="submission-success__logo"></div>
+				<p class="submission-success__message">Спасибо! Мы будем держать <br/>
+					вас в курсе обновлений</p>
+			</div>
+		</div>
 	</section>
 </main>
 <footer class="footer" id="footer">
