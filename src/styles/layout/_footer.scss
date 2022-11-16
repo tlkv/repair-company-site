@@ -2,13 +2,14 @@
 	min-height: 520px;
 	background-color: $gray-backgr;
 	padding: 20px;
+	text-align: center;
 
 	.social {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 30px;
 		width: fit-content;
-		margin: 52px auto 30px;
+		margin: 52px auto 32px;
 	}
 
 	.social__button {
@@ -27,5 +28,70 @@
 
 	.social__btn_ig {
 		@include backgr-social('../assets/svg/ig.svg');
+	}
+
+	.footer-heading {
+		font-size: $font-size-small;
+		font-weight: 500;
+		letter-spacing: -0.01px;
+		margin-bottom: 0;
+	}
+
+	.footer-details {
+		margin-top: 5px;
+		line-height: 1.5rem;
+		color: $color-gray-light;
+	}
+
+	.contacts {
+		font-size: $font-size-small;
+		font-weight: 400;
+		letter-spacing: -0.01px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		max-width: 1010px;
+		padding: 10px;
+		margin: 60px auto 10px;
+
+		a {
+			color: $color-black;
+			&:hover {
+				color: $color-orange;
+			}
+		}
+	}
+
+	.contacts__phone {
+		@extend %flex-centered;
+		@include icon-before('../assets/svg/phone.svg', $phone-icon-size, $phone-icon-size);
+	}
+
+	.contacts__email {
+		@extend %flex-aligned-center;
+		margin-left: 15px;
+		@include icon-before('../assets/svg/envelope.svg', 31px, 21px);
+		span {
+			box-shadow: 0 -2px 0 0 $color-orange inset;
+			line-height: 1.8rem;
+		}
+	}
+
+	.contacts__address-title {
+		margin: 12px auto 5px;
+	}
+
+	.contacts__address-subtitle {
+		margin-top: 0;
+		font-size: 1rem;
+		color: $color-gray-light;
+	}
+
+	.copyright {
+		margin: 46px auto 0;
+		width: 93%;
+		border-top: 1px solid $color-gray-form;
+		padding-top: 35px;
+		@extend %flex-centered;
+		color: $color-gray-light;
 	}
 }

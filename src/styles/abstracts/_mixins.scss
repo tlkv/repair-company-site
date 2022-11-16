@@ -68,7 +68,7 @@
 %orange-btn {
 	background-color: $color-orange;
 	box-shadow: 0 7px 15px 0 rgb(249 87 46 / 60%);
-	transition: all $duration-normal;
+	transition: all $duration-fast;
 	cursor: pointer;
 
 	&:hover {
@@ -108,4 +108,15 @@
 	font-size: 0.8rem;
 	display: block;
 	margin: 0 auto;
+}
+
+@mixin icon-before($url, $width, $height) {
+	&:before {
+		@extend %pseudo-img;
+		width: $width;
+		height: $height;
+		@include backgr-centered($url);
+		margin-right: $icon-margin-default;
+		margin-top: -3px;
+	}
 }

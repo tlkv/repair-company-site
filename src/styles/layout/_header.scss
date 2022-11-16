@@ -22,16 +22,10 @@
 		@extend %menu-link;
 		@extend %flex-centered;
 		@extend %font-bigger;
-		line-height: calc($menu-font-size + 4px);
+		line-height: calc($font-size-small + 4px);
 		padding-bottom: 5px;
 
-		&:before {
-			@extend %pseudo-img;
-			width: $phone-icon-width;
-			height: $phone-icon-height;
-			@include backgr-centered('../assets/svg/phone.svg');
-			margin-right: 9px;
-		}
+		@include icon-before('../assets/svg/phone.svg', $phone-icon-size, $phone-icon-size);
 
 		&:hover {
 			color: $color-orange;

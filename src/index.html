@@ -113,7 +113,7 @@
 					<input pattern="[0-9]{10,11}" minlength="10" maxlength="11" placeholder="Телефон"
 								 class="submission-field__inner"
 								 type="tel" name="phone"
-								 id="phone">
+								 id="phone" oninput="this.setCustomValidity('10-11 numbers')">
 					<label class="submission-field__label" for="phone">Телефон</label>
 				</div>
 				<input class="submission__form-button" type="submit" value="Подписаться">
@@ -134,9 +134,21 @@
 		<a href="#" class="social__button social__btn_vk"></a>
 		<a href="#" class="social__button social__btn_ig"></a>
 	</div>
-	<h3>Следите за нашим развитием</h3>
-	<p>Подпишитесь на наши аккаунты в соц. сетях, знакомьтесь<br/> с нашими проектами и тем, что нас
-		вдохновляет</p>
+	<h3 class="footer-heading">Следите за нашим развитием</h3>
+	<p class="footer-details">Подпишитесь на наши аккаунты в соц. сетях, знакомьтесь<br/>
+		с нашими проектами и тем, что нас вдохновляет</p>
+	<div class="contacts">
+		<a class="contacts__phone" href="tel:+78129035445"
+		>+7 (812) 903-54-45</a
+		>
+		<div class="contacts__address">
+			<p class="contacts__address-title">Ул. Галерная, д 55</p>
+			<p class="contacts__address-subtitle">Санкт-Петербург</p>
+		</div>
+		<a class="contacts__email" href="mailto:9035445@gmail.com"
+		><span>9035445@gmail.com</span></a>
+	</div>
+	<div class="copyright">© FIX Ремонт, 2016</div>
 </footer>
 </body>
 

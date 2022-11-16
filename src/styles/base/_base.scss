@@ -3,6 +3,14 @@
 	scroll-behavior: smooth;
 }
 
+/*
+html {
+	@media (max-width: $breakpoint-md) {
+		font-size: 80%;
+	}
+}
+*/
+
 body {
 	margin: 0;
 	padding: 0;

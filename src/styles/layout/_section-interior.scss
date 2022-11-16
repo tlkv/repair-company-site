@@ -30,7 +30,7 @@
 		.slider-item__descr {
 			width: 20%;
 			padding: 0 5px 0 18px;
-			transition: all $duration-normal;
+			transition: all $duration-fast;
 			font-size: 0.8rem;
 			line-height: 1.25rem;
 			margin: 0;
@@ -41,7 +41,7 @@
 	.slider-buttons {
 		width: 75px;
 		@extend %flex-spaced;
-		left: calc(50vw + 36.5%);
+		left: calc(50vw + 37%);
 		z-index: $slider-buttons-zindex;
 		position: absolute;
 		bottom: 2px;

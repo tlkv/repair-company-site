@@ -2,21 +2,23 @@ $header-height: 55px;
 $header-zindex: 2;
 $subscribe-labels-zindex: 1;
 $subscribe-header-zindex: 4;
+$hidden-zindex: -1;
 
 $slider-buttons-zindex: 2;
 $header-indent-horizontal: 110px;
 $header-indent-vertical: 48px;
 $header-logo-width: 202px;
-$phone-icon-width: 25px;
-$phone-icon-height: 25px;
+$phone-icon-size: 26px;
 $promo-btn-width: 260px;
 $promo-btn-height: 51px;
 $promo-btn-radius: 100px;
 $promo-descr-indent: 90px;
 $player-button-size: 250px;
 
+$icon-margin-default: 10px;
+
 $font-size-biggest: 4rem;
-$menu-font-size: 1.33rem;
+$font-size-small: 1.33rem;
 
 $duration-normal: 0.6s;
 $duration-medium: 0.45s;

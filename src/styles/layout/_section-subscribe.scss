@@ -29,8 +29,8 @@
 
 		&:before {
 			@extend %pseudo-img;
-			width: 46px;
-			height: 69px;
+			width: 47px;
+			height: 70px;
 			margin-right: 18px;
 			@include backgr-centered('../assets/svg/door.svg');
 		}
@@ -57,6 +57,7 @@
 		font-size: 1.12rem;
 		padding: 10px 24px;
 		width: 100%;
+		transition: border $duration-fast;
 
 		&:hover,
 		&:focus,
@@ -74,7 +75,7 @@
 
 		&::placeholder {
 			color: $color-gray-light;
-			transition: $duration-fast opacity;
+			transition: opacity $duration-fast;
 		}
 
 		&:focus + .submission-field__label,
@@ -99,7 +100,7 @@
 		cursor: text;
 
 		opacity: 0;
-		transition: $duration-fast top, $duration-fast opacity;
+		transition: top $duration-fast, opacity $duration-fast;
 
 		height: 1rem;
 		left: 20px;
@@ -136,7 +137,7 @@
 		width: 100%;
 		position: absolute;
 		top: 0;
-		z-index: -1;
+		z-index: $hidden-zindex;
 	}
 
 	#subscribe {

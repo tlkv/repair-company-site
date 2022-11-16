@@ -1,7 +1,7 @@
 .promo-section {
 	@extend %flex-centered;
 	height: 100vh;
-	@media (max-width: $breakpoint-lg) {
+	@media (max-width: $breakpoint-md) {
 		height: unset;
 	}
 	width: 100%;
@@ -10,14 +10,21 @@
 		@extend %flex-col;
 		width: 48%;
 		@extend %promo-item;
-		@media (max-width: $breakpoint-lg) {
+
+		@media (max-width: $breakpoint-md) {
 			width: 100%;
 		}
 	}
 
 	.promo-description__title {
 		margin-top: 30vh;
+		@media (max-width: $breakpoint-md) {
+			margin-top: 120px;
+		}
 		@extend %font-biggest;
+		@media (max-width: $breakpoint-lg) {
+			font-size: 2.6rem;
+		}
 		line-height: $font-size-biggest;
 		margin-left: calc($promo-descr-indent - 4px);
 		margin-bottom: 5px;
@@ -30,7 +37,7 @@
 
 	.promo-description__details {
 		@extend %font-bigger-spaced;
-		line-height: calc($menu-font-size + 9px);
+		line-height: calc($font-size-small + 9px);
 		margin-left: $promo-descr-indent;
 	}
 
@@ -45,11 +52,12 @@
 	.promo-description__launch-details {
 		color: $color-gray-light;
 		width: fit-content;
-		margin-left: 31px;
+		margin: 15px 10px 15px 31px;
 	}
 
 	.promo-description__scroll-btn {
 		color: $color-orange;
+		font-weight: 500;
 		margin-top: auto;
 		margin-left: 95px;
 		margin-bottom: 26px;
@@ -57,8 +65,8 @@
 
 		&:before {
 			@extend %pseudo-img;
-			width: 42px;
-			height: 32px;
+			width: 43px;
+			height: 33px;
 			margin-right: 12px;
 			@include backgr-centered('../assets/svg/arrows.svg');
 			transition: all $duration-normal;
@@ -74,7 +82,7 @@
 	.promo-video {
 		width: 52%;
 		@extend %promo-item;
-		@media (max-width: $breakpoint-lg) {
+		@media (max-width: $breakpoint-md) {
 			width: 100%;
 		}
 	}
@@ -98,10 +106,12 @@
 	.video-container__player {
 		@extend %flex-centered;
 		height: 100%;
+		@media (max-width: $breakpoint-md) {
+			height: 600px;
+		}
 	}
 
 	video::-webkit-media-controls {
-		/* Works only on Chrome-based browsers */
 		display: none;
 	}
 
@@ -128,17 +138,16 @@
 			display: block;
 			padding: 4px;
 			margin-bottom: 20px;
+			transition: background $duration-fast ease-in-out;
 
 			&:before {
 				@extend %pseudo-img;
-				width: 111px;
-				height: 127px;
+				width: 112px;
+				height: 128px;
 				margin: 55px 5px 5px 75px;
 				@include backgr-centered('../assets/svg/play_small.svg');
 				transition: all $duration-medium;
 			}
-
-			transition: background $duration-fast ease-in-out;
 		}
 	}
 }
