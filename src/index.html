@@ -3,31 +3,154 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>M18</title>
+	<title>FIX Remont</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-<header class="header">
-	<div class="navbar">
-		<h1>Webpack 5 Template Boilerplate</h1>
-	</div>
+<header class="main-header">
+	<nav class="menu">
+		<a class="menu__logo" href="#"></a>
+		<a class="menu__contacts" href="#footer"><span>Контакты</span></a>
+	</nav>
 </header>
+
 <main class="main-container">
-	<section class="section promo1">
-		<h3>Section 1</h3>
-		<p>Sec 1 content</p>
+	<section class="promo-section">
+		<div class="promo-description">
+			<h1 class="promo-description__title">Ремонт квартир в типовых домах</h1>
+			<p class="promo-description__details">Готовый дизайн-проект, работы и материалы за 3
+				месяца от 610 т.р.</p>
+			<div class="promo-btn-wrapper">
+				<a href="#subscribe" class="promo-description__launch-btn">Узнайте о запуске первым</a>
+				<div class="promo-description__launch-details">Старт весной 2016</div>
+			</div>
+			<a href="#about" class="promo-description__scroll-btn">
+				<span>Листайте вниз,<br/> чтобы ничего не упустить</span>
+			</a>
+		</div>
+		<div class="promo-video">
+			<div class="video-container">
+				<video class="video-container__player" src="./assets/videos/video.mp4"
+							 poster="./assets/img/content/video-poster.jpg"></video>
+				<button class="video-container__button">
+					<span class="video-container__button-inner"></span>
+					<span class="video-container__button-text">Смотреть видео</span>
+				</button>
+			</div>
+		</div>
 	</section>
-	<section class="section promo2">
-		<h3>Section 2</h3>
-		<p>Tempora voluptates eum ad assumenda quia modi</p>
+	<section class="about-section" id="about">
+		<h2 class="title">FIX Ремонт — это легко</h2>
+		<p class="subtitle">Готовые проекты, проверенные материалы и умелые руки</p>
+		<div class="about-info">
+			<div class="about-info-item">
+				<h3 class="about-info__item-title">Опытная команда</h3>
+				<p class="about-info__item-details">Команда проектировщиков и строителей со стажем работы
+					более 6 лет</p>
+			</div>
+			<div class="about-info-item">
+				<h3 class="about-info__item-title">Типовые дизайн-проекты</h3>
+				<p class="about-info__item-details">Три стиля чистовой отделки «под ключ» и спектр
+					дополнительных услуг</p>
+			</div>
+			<div class="about-info-item">
+				<h3 class="about-info__item-title">Фиксированная смета</h3>
+				<p class="about-info__item-details">Никаких дополнительных расходов во время ремонта. Расчет
+					стоимости при заключении договора</p>
+			</div>
+			<div class="about-info-item about-info__item--item-big">
+				<h3 class="about-info__item-title">Срок работ</h3>
+				<p class="about-info__item-details"><strong>3 месяца</strong></p>
+			</div>
+		</div>
 	</section>
-	<section class="section promo3">
-		<h3>Section 3</h3>
-		<p>Sec 3 content</p>
+	<section class="interior-section">
+		<div class="interior-heading">
+			<h2 class="title">3 стиля интерьера</h2>
+			<p class="subtitle">Скандинавский, классический и эко-стиль</p>
+		</div>
+		<div class="slider">
+			<div class="slider-item">
+				<img class="slider-item__img" src="assets/img/content/slide1.jpg" loading="lazy"
+						 alt="slide">
+				<p class="slider-item__descr">Скандинавский стиль</p>
+			</div>
+			<div class="slider-item">
+				<img class="slider-item__img" src="assets/img/content/slide2.jpg" loading="lazy"
+						 alt="slide">
+				<p class="slider-item__descr">Кафельная плитка <br/> в ванной комнате
+					<br/> в скандинавском стиле</p>
+			</div>
+			<div class="slider-item">
+				<img class="slider-item__img" src="assets/img/content/slide3.jpg" loading="lazy"
+						 alt="slide">
+				<p class="slider-item__descr">Эко-стиль</p>
+			</div>
+			<div class="slider-buttons">
+				<button class="slider-buttons__prev"></button>
+				<button class="slider-buttons__next"></button>
+			</div>
+		</div>
+	</section>
+	<section class="subscribe-section">
+		<div class="subscribe-section-inner">
+			<h2 class="title" id="subscribe">Узнайте о запуске сервиса первым</h2>
+			<form class="submission-form" action="#">
+				<p class="subtitle">Первым 10 клиентам стальная<br/> входная дверь в подарок</p>
+				<div class="submission-field">
+					<input required minlength="3" maxlength="50" placeholder="Имя и фамилия*"
+								 class="submission-field__inner" type="text"
+								 name="name"
+								 id="name">
+					<label class="submission-field__label" for="name">Имя и фамилия*</label>
+				</div>
+				<div class="submission-field">
+					<input required minlength="3" maxlength="50" placeholder="Е-mail адрес*"
+								 class="submission-field__inner" type="email"
+								 name="email"
+								 id="email">
+					<label class="submission-field__label" for="email">Email адрес *</label>
+				</div>
+				<div class="submission-field">
+					<input pattern="[0-9]{10,11}" minlength="10" maxlength="11" placeholder="Телефон"
+								 class="submission-field__inner"
+								 type="tel" name="phone"
+								 id="phone">
+					<label class="submission-field__label" for="phone">Телефон</label>
+				</div>
+				<input class="submission__form-button" type="submit" value="Подписаться">
+				<p class="submission-form__disclaimer">* Обязательные для заполнения поля</p>
+				<a class="submission-form__policy" href="#">Политика конфиденциальности</a>
+			</form>
+			<div class="submission-success">
+				<div class="submission-success__logo"></div>
+				<p class="submission-success__message">Спасибо! Мы будем держать
+					вас в курсе обновлений</p>
+			</div>
+		</div>
 	</section>
 </main>
-<footer class="footer"> footer</footer>
+<footer class="footer" id="footer">
+	<div class="social">
+		<a href="#" class="social__button social__btn_fb"></a>
+		<a href="#" class="social__button social__btn_vk"></a>
+		<a href="#" class="social__button social__btn_ig"></a>
+	</div>
+	<h3 class="footer-heading">Следите за нашим развитием</h3>
+	<p class="footer-details">Подпишитесь на наши аккаунты в соц. сетях, знакомьтесь с нашими
+		проектами и тем, что нас вдохновляет</p>
+	<div class="contacts">
+		<a class="contacts__phone" href="tel:+78129035445">+7 (812) 903-54-45</a>
+		<div class="contacts__address">
+			<p class="contacts__address-title">Ул. Галерная, д 55</p>
+			<p class="contacts__address-subtitle">Санкт-Петербург</p>
+		</div>
+		<a class="contacts__email" href="mailto:9035445@gmail.com">
+			<span>9035445@gmail.com</span></a>
+	</div>
+	<div class="copyright">© FIX Ремонт, 2016</div>
+</footer>
 </body>
 
 </html>

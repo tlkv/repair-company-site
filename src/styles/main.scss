@@ -3,8 +3,8 @@
 // 7-1 sass pattern
 // 1. Configuration and helpers
 @import 'abstracts/variables';
-@import 'abstracts/mixins';
 @import 'abstracts/breakpoints';
+@import 'abstracts/mixins';
 
 // 2. Vendors
 @import 'vendors/normalize';
@@ -15,12 +15,16 @@
 @import 'base/typography';
 
 // 4. Layout-related sections
-@import 'layout/footer';
-@import 'layout/main-container';
 @import 'layout/header';
+@import 'layout/section-promo';
+@import 'layout/section-about';
+@import 'layout/section-interior';
+@import 'layout/section-subscribe';
+@import 'layout/footer';
 
 // 5. Components
 @import 'components/button';
+@import 'components/link';
 
 // 6. Page-specific styles
 // @import 'pages/home';

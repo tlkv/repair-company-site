@@ -1,9 +1,0 @@
-.main-container {
-	display: flex;
-	flex-direction: column;
-	margin: 0 auto;
-	max-width: $container-width;
-	min-height: calc(100vh - $footer-height);
-	padding: calc($header-height + $inner-container-indent) $inner-container-indent
-		$inner-container-indent;
-}

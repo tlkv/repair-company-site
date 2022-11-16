@@ -1,12 +1,49 @@
-header {
-	position: fixed;
-	width: 100%;
+.main-header {
+	position: absolute;
+	top: $header-indent-vertical;
+	left: $header-indent-horizontal;
+	width: calc(100vw - 2 * $header-indent-horizontal);
 	height: $header-height;
-	color: $gray-backgr;
-	background-color: $bluefont;
-	.navbar {
+	z-index: $header-zindex;
+	pointer-events: none;
+
+	@media (max-width: $breakpoint-md) {
+		width: 100%;
+		padding: 10px 15px;
+		top: 0;
+		left: 0;
+		position: fixed;
+		height: 72px;
+		box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+		z-index: $header-mob-zindex;
+		background-color: $color-white;
+	}
+
+	.menu {
+		@extend %flex-spaced;
+	}
+
+	.menu__logo {
+		@extend %menu-link;
+		width: $header-logo-width;
+		height: $header-height;
+		@include backgr-centered('../assets/svg/logotype.svg');
+		@media (max-width: $breakpoint-xs) {
+			max-width: 120px;
+		}
+	}
+
+	.menu__contacts {
+		@extend %menu-link;
 		@extend %flex-centered;
-		@include block-content;
-		max-width: $container-width;
+		@extend %font-bigger;
+		line-height: calc($font-size-small + 4px);
+		padding-bottom: 5px;
+
+		@include icon-before('../assets/svg/phone.svg', $phone-icon-size, $phone-icon-size);
+
+		&:hover {
+			color: $color-orange;
+		}
 	}
 }

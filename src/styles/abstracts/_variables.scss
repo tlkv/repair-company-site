@@ -1,12 +1,46 @@
-$header-height: 100px;
-$footer-height: 60px;
-$container-width: 1200px;
-$inner-container-indent: 10px;
+$header-height: 55px;
+$header-zindex: 2;
+$subscribe-labels-zindex: 1;
+$subscribe-header-zindex: 4;
+$header-mob-zindex: 5;
+$hidden-zindex: -1;
+$slider-buttons-zindex: 2;
 
+$header-indent-horizontal: 110px;
+$header-indent-vertical: 48px;
+$header-logo-width: 202px;
+$phone-icon-size: 26px;
+$promo-btn-width: 260px;
+$promo-btn-height: 51px;
+$promo-btn-radius: 100px;
+$promo-descr-indent: 110px;
+$player-button-size: 250px;
+
+$icon-margin-default: 10px;
+
+$font-size-biggest: 4rem;
+$font-size-small: 1.33rem;
+
+$duration-normal: 0.6s;
+$duration-medium: 0.45s;
+$duration-fast: 0.3s;
+
+$container-width: 1200px;
+$inner-container-indent: 20px;
+
+$color-orange: #f9572e;
+$color-orange-hovered: #ff7b59;
+$color-lightgreen: #63d2c1;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-gray-light: #666666;
+$color-gray-form: #cccccc;
 $bluefont: darkblue;
 $graylight: #cfcfcf;
-$gray-backgr: #eee;
+$gray-backgr: #f2f2f2;
+$border-width-standard: 4px;
+$social-btn-size: 51px;
 
-$default-font: 'GoogleSans', sans-serif;
-$default-transition-duration: 0.4s;
-$default-transition-function: ease-out;
+$slider-item-width: 1000px;
+$form-field-height: 60px;
+$form-field-margin: 30px;

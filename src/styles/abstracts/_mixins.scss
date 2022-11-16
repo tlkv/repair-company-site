@@ -1,11 +1,30 @@
-@mixin backgr($url) {
-	background: url($url) center no-repeat;
+@mixin icon-before($url, $width, $height) {
+	&:before {
+		@extend %pseudo-img;
+		width: $width;
+		height: $height;
+		@include backgr-centered($url);
+		margin-right: $icon-margin-default;
+		margin-top: -3px;
+	}
+}
+
+@mixin backgr-centered($url) {
+	background: url($url) center/contain no-repeat;
+}
+
+@mixin backgr-social($url) {
+	background: $color-orange url($url) center/50% 50% no-repeat;
 }
 
 @mixin shadow() {
 	&:hover {
 		box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
 	}
+}
+
+%btn-shadow {
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 @mixin block-content() {
@@ -15,8 +34,89 @@
 	padding: 0 30px;
 }
 
-%flex-centered {
+%promo-item {
+	height: 100%;
+	padding: $inner-container-indent;
+}
+
+%flex-simple {
 	display: flex;
+	flex-wrap: wrap;
+}
+
+%flex-aligned-center {
+	@extend %flex-simple;
 	align-items: center;
+}
+
+%flex-centered {
+	@extend %flex-aligned-center;
 	justify-content: center;
+}
+
+%flex-spaced {
+	@extend %flex-aligned-center;
+	justify-content: space-between;
+}
+
+%flex-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+%menu-link {
+	color: $color-black;
+	@extend %flex-centered;
+	pointer-events: auto;
+}
+
+%button-link {
+	color: $color-white;
+	@extend %flex-centered;
+}
+
+%orange-btn {
+	background-color: $color-orange;
+	box-shadow: 0 7px 15px 0 rgb(249 87 46 / 60%);
+	transition: all $duration-fast;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $color-orange-hovered;
+		box-shadow: 0 15px 20px rgb(249 87 46 / 70%);
+	}
+}
+
+%narrow-container {
+	max-width: 1020px;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+%pseudo-img {
+	content: '';
+	display: block;
+}
+
+%social-btn {
+	width: $social-btn-size;
+	height: $social-btn-size;
+	display: block;
+}
+
+%slider-button {
+	width: 21px;
+	height: 44px;
+	transition: all $duration-fast;
+
+	&:hover {
+		transform: scaleY(0.75);
+	}
+}
+
+%form-disclaimer {
+	font-size: 0.8rem;
+	display: block;
+	margin: 0 auto;
 }

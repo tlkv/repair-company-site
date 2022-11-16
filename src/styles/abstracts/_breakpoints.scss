@@ -1,16 +1,5 @@
+$breakpoint-xs: 480px;
 $breakpoint-sm: 768px;
-$breakpoint-md: 1200px;
-$breakpoint-lg: 1640px;
-$breakpoints: (
-	'medium': (
-		min-width: 768px,
-	),
-	'large': (
-		min-width: 1200px,
-	),
-	'huge': (
-		min-width: 1640px,
-	),
-);
-
-// z-indexes
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1400px;
+$breakpoint-qhd: 2560px;

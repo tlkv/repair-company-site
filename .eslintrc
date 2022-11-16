@@ -7,6 +7,10 @@
   },
   "ignorePatterns": "*.config.js",
   "rules": {
+    "no-param-reassign": "off",
+    "import/prefer-default-export": "off",
+    "indent": "off",
+    "no-tabs": "off",
     "implicit-arrow-linebreak": 0,
     "linebreak-style": 0,
     "no-use-before-define": 0,
@@ -21,7 +25,14 @@
     "import/no-amd": 0,
     "space-before-function-paren": 0,
     "jsx-a11y/href-no-hash": "off",
-    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
+    "jsx-a11y/anchor-is-valid": [
+      "warn",
+      {
+        "aspects": [
+          "invalidHref"
+        ]
+      }
+    ],
     "import/no-unresolved": 0,
     "import/extensions": 0
   },
