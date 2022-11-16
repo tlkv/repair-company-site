@@ -14,6 +14,7 @@
 		<a class="menu__contacts" href="#footer"><span>Контакты</span></a>
 	</nav>
 </header>
+
 <main class="main-container">
 	<section class="promo-section">
 		<div class="promo-description">
@@ -24,7 +25,9 @@
 				<a href="#subscribe" class="promo-description__launch-btn">Узнайте о запуске первым</a>
 				<div class="promo-description__launch-details">Старт весной 2016</div>
 			</div>
-			<a href="#about" class="promo-description__scroll-btn"><span>Листайте вниз,<br/> чтобы ничего не упустить</span></a>
+			<a href="#about" class="promo-description__scroll-btn">
+				<span>Листайте вниз,<br/> чтобы ничего не упустить</span>
+			</a>
 		</div>
 		<div class="promo-video">
 			<div class="video-container">
@@ -113,7 +116,7 @@
 					<input pattern="[0-9]{10,11}" minlength="10" maxlength="11" placeholder="Телефон"
 								 class="submission-field__inner"
 								 type="tel" name="phone"
-								 id="phone" oninput="this.setCustomValidity('10-11 numbers')">
+								 id="phone">
 					<label class="submission-field__label" for="phone">Телефон</label>
 				</div>
 				<input class="submission__form-button" type="submit" value="Подписаться">
@@ -138,15 +141,13 @@
 	<p class="footer-details">Подпишитесь на наши аккаунты в соц. сетях, знакомьтесь с нашими
 		проектами и тем, что нас вдохновляет</p>
 	<div class="contacts">
-		<a class="contacts__phone" href="tel:+78129035445"
-		>+7 (812) 903-54-45</a
-		>
+		<a class="contacts__phone" href="tel:+78129035445">+7 (812) 903-54-45</a>
 		<div class="contacts__address">
 			<p class="contacts__address-title">Ул. Галерная, д 55</p>
 			<p class="contacts__address-subtitle">Санкт-Петербург</p>
 		</div>
-		<a class="contacts__email" href="mailto:9035445@gmail.com"
-		><span>9035445@gmail.com</span></a>
+		<a class="contacts__email" href="mailto:9035445@gmail.com">
+			<span>9035445@gmail.com</span></a>
 	</div>
 	<div class="copyright">© FIX Ремонт, 2016</div>
 </footer>

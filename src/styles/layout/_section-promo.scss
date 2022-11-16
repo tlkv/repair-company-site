@@ -36,7 +36,6 @@
 			line-height: 3rem;
 		}
 		line-height: $font-size-biggest;
-		// margin-left: calc($promo-descr-indent - 4px);
 		margin-bottom: 5px;
 	}
 
@@ -60,7 +59,6 @@
 		}
 		@extend %font-bigger-spaced;
 		line-height: calc($font-size-small + 9px);
-		// margin-left: $promo-descr-indent;
 	}
 
 	.promo-description__launch-btn {
@@ -85,7 +83,6 @@
 		color: $color-orange;
 		font-weight: 500;
 		margin-top: auto;
-		// margin-left: 95px;
 		margin-bottom: 26px;
 		@extend %flex-simple;
 
@@ -160,7 +157,7 @@
 
 	.video-container__button {
 		pointer-events: none;
-		width: calc($player-button-size + 8px);
+		width: calc($player-button-size + 14px);
 		height: calc($player-button-size + 50px);
 		position: absolute;
 		top: calc(50% - 180px);

@@ -2,11 +2,10 @@
 	@extend %narrow-container;
 	max-width: 1000px;
 	padding: 0 10px;
-	margin-top: 160px;
-	margin-bottom: 134px;
+	margin: 160px auto 134px;
 
 	@media (max-width: $breakpoint-sm) {
-		margin-top: 50px;
+		margin: 50px auto 40px;
 	}
 
 	.subscribe-section-inner {
@@ -76,7 +75,7 @@
 		margin-bottom: $form-field-margin;
 		border-radius: 4px;
 		border: 1px solid $color-gray-form;
-		font-size: 1.12rem;
+		font-size: 18px !important; // handle ios auto-resize
 		padding: 10px 24px;
 		width: 100%;
 		transition: border $duration-fast;
@@ -170,7 +169,7 @@
 	.submission-success__logo {
 		width: 220px;
 		height: 143px;
-		margin: 5px auto 20px auto;
+		margin: 5px auto 20px;
 		@include backgr-centered('../assets/svg/checkmark.svg');
 	}
 
