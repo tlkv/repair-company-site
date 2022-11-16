@@ -157,13 +157,14 @@
 
 	.video-container__button {
 		pointer-events: none;
-		width: calc($player-button-size + 14px);
+		width: calc($player-button-size + 30px);
 		height: calc($player-button-size + 50px);
 		position: absolute;
 		top: calc(50% - 180px);
 		background: transparent;
 		color: $color-orange;
 		@extend %font-bigger;
+		padding: 0 15px;
 		transition: opacity $duration-medium;
 
 		.video-container__button-inner {
