@@ -25,6 +25,9 @@ $default-font: 'Muller', sans-serif;
 	letter-spacing: -0.1px;
 	font-weight: 500;
 	margin-top: 146px;
+	@media (max-width: $breakpoint-md) {
+		margin-top: 16px;
+	}
 	margin-bottom: 0;
 }
 

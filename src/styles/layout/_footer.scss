@@ -38,7 +38,8 @@
 	}
 
 	.footer-details {
-		margin-top: 5px;
+		max-width: 440px;
+		margin: 5px auto 0;
 		line-height: 1.5rem;
 		color: $color-gray-light;
 	}
@@ -52,6 +53,11 @@
 		max-width: 1010px;
 		padding: 10px;
 		margin: 60px auto 10px;
+
+		@media (max-width: $breakpoint-md) {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
 
 		a {
 			color: $color-black;
@@ -73,6 +79,9 @@
 		span {
 			box-shadow: 0 -2px 0 0 $color-orange inset;
 			line-height: 1.8rem;
+		}
+		@media (max-width: $breakpoint-md) {
+			justify-content: center;
 		}
 	}
 

@@ -7,38 +7,60 @@
 	width: 100%;
 
 	.promo-description {
-		@extend %flex-col;
 		width: 48%;
+		@extend %flex-col;
 		@extend %promo-item;
+		padding-left: $promo-descr-indent;
 
 		@media (max-width: $breakpoint-md) {
 			width: 100%;
+			max-width: 800px;
+			margin: 0 auto;
+			text-align: center;
+			padding: 10px;
 		}
 	}
 
 	.promo-description__title {
 		margin-top: 30vh;
+		max-width: 510px;
+		@media (max-width: $breakpoint-md), (min-width: $breakpoint-qhd) {
+			max-width: unset;
+		}
 		@media (max-width: $breakpoint-md) {
-			margin-top: 120px;
+			margin-top: 80px;
 		}
 		@extend %font-biggest;
 		@media (max-width: $breakpoint-lg) {
 			font-size: 2.6rem;
+			line-height: 3rem;
 		}
 		line-height: $font-size-biggest;
-		margin-left: calc($promo-descr-indent - 4px);
+		// margin-left: calc($promo-descr-indent - 4px);
 		margin-bottom: 5px;
 	}
 
 	.promo-btn-wrapper {
 		@extend %flex-aligned-center;
-		margin: 24px 10px 20px $promo-descr-indent;
+		margin: 16px 0 40px;
+		@media (max-width: $breakpoint-md) {
+			justify-content: center;
+			margin-bottom: 20px;
+		}
 	}
 
 	.promo-description__details {
+		max-width: 480px;
+		@media (max-width: $breakpoint-md), (min-width: $breakpoint-qhd) {
+			max-width: unset;
+		}
+
+		@media (max-width: $breakpoint-md) {
+			margin: 0;
+		}
 		@extend %font-bigger-spaced;
 		line-height: calc($font-size-small + 9px);
-		margin-left: $promo-descr-indent;
+		// margin-left: $promo-descr-indent;
 	}
 
 	.promo-description__launch-btn {
@@ -52,14 +74,18 @@
 	.promo-description__launch-details {
 		color: $color-gray-light;
 		width: fit-content;
-		margin: 15px 10px 15px 31px;
+		margin: 22px 20px 22px 31px;
+
+		@media (max-width: $breakpoint-xs) {
+			margin-bottom: 10px;
+		}
 	}
 
 	.promo-description__scroll-btn {
 		color: $color-orange;
 		font-weight: 500;
 		margin-top: auto;
-		margin-left: 95px;
+		// margin-left: 95px;
 		margin-bottom: 26px;
 		@extend %flex-simple;
 
@@ -77,6 +103,10 @@
 				transform: scaleX(0.8);
 			}
 		}
+		@media (max-width: $breakpoint-md) {
+			justify-content: center;
+			margin-bottom: 0;
+		}
 	}
 
 	.promo-video {
@@ -84,6 +114,7 @@
 		@extend %promo-item;
 		@media (max-width: $breakpoint-md) {
 			width: 100%;
+			padding: 10px;
 		}
 	}
 
@@ -101,14 +132,20 @@
 				}
 			}
 		}
+
+		@media (max-width: $breakpoint-md) {
+			height: 500px;
+		}
+
+		@media (max-width: $breakpoint-xs) {
+			height: 370px;
+		}
 	}
 
 	.video-container__player {
 		@extend %flex-centered;
 		height: 100%;
-		@media (max-width: $breakpoint-md) {
-			height: 600px;
-		}
+		width: 100%;
 	}
 
 	video::-webkit-media-controls {
@@ -116,7 +153,9 @@
 	}
 
 	video[poster] {
-		object-fit: initial;
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
 	}
 
 	.video-container__button {

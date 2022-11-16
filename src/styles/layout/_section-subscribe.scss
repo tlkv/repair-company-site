@@ -5,6 +5,10 @@
 	margin-top: 160px;
 	margin-bottom: 134px;
 
+	@media (max-width: $breakpoint-sm) {
+		margin-top: 50px;
+	}
+
 	.subscribe-section-inner {
 		position: relative;
 		min-height: 647px;
@@ -17,6 +21,18 @@
 		background-color: $color-white;
 		width: fit-content;
 		padding: 0 15px 0 20px;
+
+		@media (max-width: $breakpoint-sm) {
+			font-size: 1.8rem;
+		}
+
+		@media (max-width: $breakpoint-xs) {
+			margin-top: -12px;
+			padding: 0 5px;
+			max-width: 240px;
+			font-size: 1.2rem;
+			line-height: 1.2rem;
+		}
 	}
 
 	.subtitle {
@@ -33,6 +49,12 @@
 			height: 70px;
 			margin-right: 18px;
 			@include backgr-centered('../assets/svg/door.svg');
+		}
+
+		@media (max-width: $breakpoint-xs) {
+			&:before {
+				margin-bottom: 10px;
+			}
 		}
 	}
 
